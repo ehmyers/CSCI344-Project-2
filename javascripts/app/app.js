@@ -12,7 +12,7 @@ var main = function () {
     	twitter.stream("statuses/filter", { lang:"en", track:[tweetTopic] }, function (stream) {
     		stream.on("data", function (tweet) {
       		numTweets += 1;
-    			$("<p>" + numTweets + ". " + tweet.text + "</p>").prependTo("#tweets").hide().fadeIn(400);
+    			$("<p>" + tweet.text + "</p>").prependTo("#tweets").hide().fadeIn(400);
 
         	// making sure there are only ten tweets on page
         	if(numTweets > 10) {
