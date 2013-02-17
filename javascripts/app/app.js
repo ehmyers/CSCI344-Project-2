@@ -5,6 +5,7 @@ var main = function () {
     var tweetTopic = "";
 
     $("#user_input_button").click(function() {
+        $("#tweets").hide();
         // add input to result div
         tweetTopic = ($("#user_input").val());
         console.log(tweetTopic);
@@ -26,9 +27,10 @@ var main = function () {
 
         // on submit, switch screens
         // hide first screen
-        
+        $("#interface_div").fadeOut();
 
         // show second screen
+        $("#tweets").fadeIn();
     });
 }
 
