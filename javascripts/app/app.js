@@ -51,6 +51,12 @@ var main = function () {
 
   }); // ends user input button click function
 
+  // submits form on enter key?  figure out how to make this work.
+  function keydownHandler(e) {
+    if (e.keyCode == 13) {  // 13 is the enter key
+    }
+  }
+
   // uses jquery plugin, resizes h1 
   jQuery("h1").fitText();
 }
