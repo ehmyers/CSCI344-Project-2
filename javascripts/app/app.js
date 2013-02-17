@@ -40,6 +40,7 @@ var main = function () {
         } // ends the if loop
         
       }); // ends the stream.on section
+      $("<h2>" + tweetTopic + "</h2>").appendTo("header").hide().fadeIn(400);
     }); // ends twitter stream function
 
     // on submit, switch screens
