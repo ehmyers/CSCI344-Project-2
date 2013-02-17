@@ -23,6 +23,12 @@ var main = function () {
         	}
     	  });
     	});
+
+        // on submit, switch screens
+        // hide first screen
+        
+
+        // show second screen
     });
 }
 

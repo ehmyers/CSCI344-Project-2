@@ -1,7 +1,21 @@
+#background_image {
+	opacity: 0.4;
+}
+
 body {
 	background: #aaccdd;
-  padding: 0px 0px 0px 20px;
   font-family: 'Oxygen', sans-serif;
+}
+
+#front_page {
+	width: 100%;
+	text-align: center;
+}
+
+h1 {
+	padding: 50px 0px 0px 0px;
+	font-size: 6em;
+	line-height: .5em;
 }
 
 #tweets {
