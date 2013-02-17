@@ -20,6 +20,8 @@ h1 {
 	padding: 40px 0px 0px 0px;
 	font-size: 6em;
 	line-height: .5em;
+	display: inline-block;
+	width: 100%;
 }
 
 #tweets {

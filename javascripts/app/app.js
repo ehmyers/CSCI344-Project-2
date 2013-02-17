@@ -36,6 +36,9 @@ var main = function () {
 		// show second screen
 		$("#tweets").fadeIn();
 	});
+
+	// uses jquery plugin, resizes h1 
+	jQuery("h1").fitText();
 }
 
 $(document).ready(main);
