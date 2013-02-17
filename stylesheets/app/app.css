@@ -1,5 +1,9 @@
 #background_image {
+	position: absolute;
+	z-index: -1;
+	width: 100%;
 	opacity: 0.4;
+	padding: 20px 0px;
 }
 
 body {
@@ -13,11 +17,12 @@ body {
 }
 
 h1 {
-	padding: 50px 0px 0px 0px;
+	padding: 40px 0px 0px 0px;
 	font-size: 6em;
 	line-height: .5em;
 }
 
 #tweets {
   color: #333333;
+  padding: 0px 50px;
 }
