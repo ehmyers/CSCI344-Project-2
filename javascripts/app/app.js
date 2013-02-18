@@ -7,8 +7,9 @@ var main = function () {
     var numTweets = 0;
     var tweetTopic = "";
     // tracking something variables
-    var tweetLength = "";
-    var tweetAverage = "";
+    var tweetTotal = 0;
+    var tweetLength = 0;
+    var tweetAverage = 0;
 
     $("#user_input_button").click(function () {
         $("#tweets").hide();
@@ -22,15 +23,14 @@ var main = function () {
                 numTweets = numTweets + 1;
                 $("<p>" + tweet.text + "</p>").prependTo("#tweets").hide().fadeIn(400);
                 //
-                // tracked information
+                // tracked information!
                 // calculates average characters
                 tweetLength = ("" + tweet.text).length;
-                //console.log(tweetLength);
-                tweetAverage = Math.round((tweetAverage + tweetLength) / numTweets);
-                //console.log(tweetAverage);
-                console.log(tweet);
+                tweetTotal = tweetTotal + tweetLength;
+                tweetAverage = Math.round((tweetTotal + tweetLength) / numTweets);
+                console.log(tweetAverage);
                 // actually adds number to page
-                $("<p>average characters per tweet: " + tweetAverage + "</p>").html("#tracked_info");
+                $("#tracked_info").html("<p>average characters per tweet: " + tweetAverage + "</p>");
                 //
                 // making sure there are only ten tweets on page
                 if (numTweets > 10) {

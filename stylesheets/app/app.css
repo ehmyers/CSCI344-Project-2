@@ -31,6 +31,10 @@ h2 {
 	margin: 0px;
 }
 
+#tracked_info {
+	font-size: .75em;
+}
+
 #tweets {
   color: #333333;
   padding: 10px 50px;
