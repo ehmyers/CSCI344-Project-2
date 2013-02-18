@@ -3,13 +3,12 @@
 var main = function () {
     "use strict";
 
-    var twitter = new ctwitter.CTwitter();
-    var numTweets = 0;
-    var tweetTopic = "";
-    // tracking something variables
-    var tweetTotal = 0;
-    var tweetLength = 0;
-    var tweetAverage = 0;
+    var twitter = new ctwitter.CTwitter(),
+        numTweets = 0,
+        tweetTopic = "",
+        tweetTotal = 0,
+        tweetLength = 0,
+        tweetAverage = 0;
 
     $("#user_input_button").click(function () {
         $("#tweets").hide();
@@ -25,7 +24,7 @@ var main = function () {
                 //
                 // tracked information!
                 // calculates average characters
-                tweetLength = ("" + tweet.text).length;
+                tweetLength = (tweet.text).length;
                 tweetTotal = tweetTotal + tweetLength;
                 tweetAverage = Math.round((tweetTotal + tweetLength) / numTweets);
                 console.log(tweetAverage);
