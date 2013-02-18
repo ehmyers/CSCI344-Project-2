@@ -25,9 +25,10 @@ var main = function () {
                 // tracked information
                 // calculates average characters
                 tweetLength = ("" + tweet.text).length;
-                console.log(tweetLength);
+                //console.log(tweetLength);
                 tweetAverage = Math.round((tweetAverage + tweetLength) / numTweets);
-                console.log(tweetAverage);
+                //console.log(tweetAverage);
+                console.log(tweet);
                 // actually adds number to page
                 $("<p>average characters per tweet: " + tweetAverage + "</p>").html("#tracked_info");
                 //
@@ -52,12 +53,12 @@ var main = function () {
 
     }); // ends user input button click function
 
-    // submits form on enter key?    figure out how to make this work.
-    function keydownHandler(e) {
+    // submits form on enter key?
+    $("#user_input").keypress(function (e) {
         if (e.keyCode === 13) {    // 13 is the enter key
-            $("#user_input_button").trigger("click");
+            $("#user_input_button").click();
         }
-    }
+    });
 
     // uses jquery plugin, resizes h1 
     jQuery("h1").fitText();
