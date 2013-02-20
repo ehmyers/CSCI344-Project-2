@@ -122,7 +122,7 @@ if(!window.ctwitter || !window.ctwitter.JSONPPoller || !window.ctwitter.EventEmi
 		    return result;
 		})
 		.on('data', function (data) {
-		    var i;
+        var i;
 		    //set up buffer to deliver data
 		    for (i = data.results.length - 1; i > 0; i = i - 1) {
 			buffer.push(data.results[i]);

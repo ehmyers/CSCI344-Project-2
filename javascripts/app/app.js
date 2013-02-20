@@ -1,9 +1,12 @@
 /* globals: $ */
+var $ = window.$,
+    jQuery = window.jQuery;
 
 var main = function () {
     "use strict";
 
-    var twitter = new ctwitter.CTwitter(),
+    var ctwitter = window.ctwitter,
+        twitter = new ctwitter.CTwitter(),
         numTweets = 0,
         tweetTopic = "",
         tweetTotal = 0,
@@ -27,7 +30,6 @@ var main = function () {
                 tweetLength = (tweet.text).length;
                 tweetTotal = tweetTotal + tweetLength;
                 tweetAverage = Math.round((tweetTotal + tweetLength) / numTweets);
-                console.log(tweetAverage);
                 // actually adds number to page
                 $("#tracked_info").html("<p>average characters per tweet: " + tweetAverage + "</p>");
                 //
@@ -61,6 +63,6 @@ var main = function () {
 
     // uses jquery plugin, resizes h1 
     jQuery("h1").fitText();
-}
+};
 
 $(document).ready(main);
